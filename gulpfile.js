@@ -25,15 +25,12 @@ gulp.task('default', ['transpile'], function () {
         // do not reload renderer process if the main application has changed
         // TODO Refactor this to separate browser and renderer source
         if (fileVinyl.baseName === 'main.js') return;
-   
-         electron.reload()
+
+        electron.reload();
+        
+        console.log('Reload renderer process.')
     });
 
-    gulp.src('./*.jade')
-        .pipe(jade({
-            pretty: true,
-            locals: {}
-        }))
-        .pipe(gulp.dest('./'))
+    gulp.watch('*.jade', [ 'transpile']);
 
 });
