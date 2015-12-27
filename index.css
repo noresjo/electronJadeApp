@@ -4,3 +4,14 @@ body.noscroll
     overflow: hidden;
     width: 100%;
 }
+
+div.mainMenu {
+   width: 400px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+div.mainMenu a {
+       width: 200px;
+       margin-bottom: 10px;
+}

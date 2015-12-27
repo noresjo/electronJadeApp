@@ -4,14 +4,19 @@
     <meta id="charset"/>
     <title>Hello World!</title>
     <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="node_modules/purecss/build/pure-min.css"/>
   </head>
   <body class="noScroll">
-    <h1>Hello World</h1>
-    <h2>Niklas has injected this code in jade</h2>
-    <p>
-      We are using node <script>document.write(process.versions.node)</script>,
-      Chrome <script>document.write(process.versions.chrome)</script>,
-      and Electron <script>document.write(process.versions.electron)</script>.
-    </p>
+    <div class="mainMenu">
+      <div class="pure-menu">
+        <div class="pure-menu-heading">Main Menu</div>
+      </div>
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a target="#" class="pure-button">One</a></li>
+        <li class="pure-menu-item"><a target="#" class="pure-button">Two</a></li>
+        <li id="closeButton" class="pure-menu-item"><a target="#" class="pure-button">Three</a></li>
+      </ul>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>

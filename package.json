@@ -26,6 +26,8 @@
   "dependencies": {
     "electron-connect": "^0.3.3",
     "gulp": "^3.9.0",
-    "gulp-jade": "^1.1.0"
+    "gulp-jade": "^1.1.0",
+    "lodash": "^3.10.1",
+    "purecss": "^0.6.0"
   }
 }
