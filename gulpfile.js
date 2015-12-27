@@ -19,18 +19,19 @@ gulp.task('default', ['transpile'], function () {
 
     // Restart browser process
     gulp.watch('main.js', electron.restart);
-
+    
     // Reload renderer process
-    gulp.watch(['*.css', 'index.js', 'index.html'], function (fileVinyl) {
+    gulp.watch(['*.css', '*.js', '*.html'], function (fileVinyl) {
         // do not reload renderer process if the main application has changed
         // TODO Refactor this to separate browser and renderer source
         if (fileVinyl.baseName === 'main.js') return;
 
         electron.reload();
-        
-        console.log('Reload renderer process.')
+
+        console.log('Reload renderer process since '
+            + fileVinyl.baseName + ' changed.')
     });
 
-    gulp.watch('*.jade', [ 'transpile']);
+    gulp.watch('*.jade', ['transpile']);
 
 });
