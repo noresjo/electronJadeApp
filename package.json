@@ -6,6 +6,7 @@
   "scripts": {
     "start": "electron main.js"
   },
+  "license" : "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/noresjo/electronJadeApp.git"
