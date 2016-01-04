@@ -5,8 +5,6 @@ const BrowserWindow = electron.BrowserWindow;  // Module to create native browse
 const ipcMain = require('electron').ipcMain;
 
 ipcMain.on('close-main-window', function(event, arg) {
-  console.log(arg);  // prints "ping"
-  event.sender.send('asynchronous-reply', 'pong');
   app.quit();
 });
 
@@ -38,7 +36,7 @@ app.on('ready', function () {
             y: 0
         }
         );
-
+        
     // and load the index.html of the app.
     mainWindow.loadURL('file://' + __dirname + '/index.html');
 
